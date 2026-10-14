@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10182b">
+  <meta name="description" content="SkillSpring — مساحة بسيطة لتنظيم أهدافك وتعلّم مهارات جديدة.">
+  <title>SkillSpring — خطوتك التالية تبدأ هنا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SkillSpring الصفحة الرئيسية">
+      <span class="brand-mark">✦</span><span>Skill<span class="brand-light">Spring</span></span>
+    </a>
+    <nav class="nav-links" aria-label="التنقل">
+      <a href="#discover">اكتشف</a><a href="#planner">خطتي</a><a href="#progress">تقدّمي</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" aria-label="تغيير المظهر" title="تغيير المظهر">☼</button>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> مساحتك للنمو كل يوم</div>
+        <h1>خطوة صغيرة اليوم،<br><span class="gradient-text">فرق كبير غدوة.</span></h1>
+        <p>اكتشف مهارات جديدة، حوّل أهدافك إلى خطوات واضحة، وتابع تقدّمك من مكان واحد.</p>
+        <div class="hero-actions"><a class="primary-button" href="#discover">اكتشف مسارات التعلّم <span>←</span></a><a class="text-button" href="#planner">نظّم خطتي</a></div>
+        <div class="social-proof"><div class="avatar-stack"><span>م</span><span>س</span><span>ن</span></div><span>التعلّم يبدأ بخطوة واحدة</span><span class="star">✦</span></div>
+      </div>
+      <div class="hero-art" aria-label="بطاقة تحفيزية">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="glass-card main-glass">
+          <div class="glass-top"><span class="mini-label">هدف الأسبوع</span><span class="status-dot">● نشط</span></div>
+          <div class="target-icon">↗</div>
+          <h3>تعلّم شيئًا جديدًا</h3><p>30 دقيقة كل يوم تصنع عادة قوية.</p>
+          <div class="progress-meta"><span>التقدّم</span><strong id="heroProgress">0%</strong></div>
+          <div class="progress-track"><span id="heroProgressBar"></span></div>
+          <div class="days-row"><span>س</span><span>أ</span><span class="day-active">ث</span><span>أ</span><span>خ</span><span>ج</span><span>س</span></div>
+        </div>
+        <div class="floating-note note-top"><span class="note-icon">✧</span><div><strong>أحسنت!</strong><small>واصل بنفس النسق</small></div></div>
+        <div class="floating-note note-bottom"><span class="streak-icon">⚡</span><div><strong id="streakCount">0 أيام</strong><small>من التقدّم المستمر</small></div></div>
+      </div>
+    </section>
+
+    <section class="stats-grid" id="progress">
+      <article class="stat-card"><span class="stat-icon violet">✦</span><div><span class="stat-label">المهارات المحفوظة</span><strong id="savedCount">0</strong></div></article>
+      <article class="stat-card"><span class="stat-icon cyan">✓</span><div><span class="stat-label">المهام المكتملة</span><strong id="completedCount">0</strong></div></article>
+      <article class="stat-card"><span class="stat-icon orange">◷</span><div><span class="stat-label">دقائق التركيز</span><strong id="focusMinutes">0</strong></div></article>
+    </section>
+
+    <section class="section-block" id="discover">
+      <div class="section-heading"><div><span class="section-kicker">ابدأ الاستكشاف</span><h2>مسارات تستحق وقتك</h2><p>اختر مجالًا يثير فضولك وابدأ بالتقدّم على طريقتك.</p></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن مهارة..." aria-label="ابحث عن مهارة"></label>
+      </div>
+      <div class="filter-row" id="filterRow">
+        <button class="filter-chip active" data-filter="all">الكل</button><button class="filter-chip" data-filter="tech">التقنية</button><button class="filter-chip" data-filter="creative">الإبداع</button><button class="filter-chip" data-filter="life">مهارات الحياة</button>
+      </div>
+      <div class="course-grid" id="courseGrid">
+        <article class="course-card" data-category="tech" data-title="أساسيات البرمجة"><div class="course-visual visual-code"><span class="visual-symbol">&lt;/&gt;</span><span class="visual-orb"></span><span class="visual-tag">01 / TECH</span></div><div class="course-body"><div class="course-meta"><span>التقنية</span><span>◷ 20 دقيقة / يوم</span></div><h3>أساسيات البرمجة</h3><p>افهم المنطق وراء التطبيقات وابدأ ببناء أفكارك.</p><div class="course-footer"><span class="level">مبتدئ</span><button class="save-button" data-save="code">＋ أضف إلى خطتي</button></div></div></article>
+        <article class="course-card" data-category="creative" data-title="التصميم البصري"><div class="course-visual visual-design"><span class="design-shape shape-one"></span><span class="design-shape shape-two"></span><span class="design-shape shape-three"></span><span class="visual-tag">02 / CREATE</span></div><div class="course-body"><div class="course-meta"><span>الإبداع</span><span>◷ 15 دقيقة / يوم</span></div><h3>التصميم البصري</h3><p>تعلّم كيف تحوّل الأفكار إلى صور واضحة وجذابة.</p><div class="course-footer"><span class="level">مبتدئ</span><button class="save-button" data-save="design">＋ أضف إلى خطتي</button></div></div></article>
+        <article class="course-card" data-category="life" data-title="إدارة الوقت"><div class="course-visual visual-time"><span class="clock-face">◷</span><span class="time-line"></span><span class="visual-tag">03 / FOCUS</span></div><div class="course-body"><div class="course-meta"><span>مهارات الحياة</span><span>◷ 10 دقائق / يوم</span></div><h3>إدارة الوقت</h3><p>رتّب أولوياتك واصنع وقتًا للأشياء المهمّة.</p><div class="course-footer"><span class="level">لكل المستويات</span><button class="save-button" data-save="time">＋ أضف إلى خطتي</button></div></div></article>
+        <article class="course-card" data-category="tech" data-title="الذكاء الاصطناعي"><div class="course-visual visual-ai"><span class="ai-core">✳</span><span class="ai-ring ring-one"></span><span class="ai-ring ring-two"></span><span class="visual-tag">04 / FUTURE</span></div><div class="course-body"><div class="course-meta"><span>التقنية</span><span>◷ 15 دقيقة / يوم</span></div><h3>الذكاء الاصطناعي</h3><p>تعرّف على أدوات ذكية تساعدك في التعلّم والعمل.</p><div class="course-footer"><span class="level">مبتدئ</span><button class="save-button" data-save="ai">＋ أضف إلى خطتي</button></div></div></article>
+        <article class="course-card" data-category="creative" data-title="الكتابة الإبداعية"><div class="course-visual visual-write"><span class="pen-mark">✎</span><span class="write-lines"></span><span class="visual-tag">05 / WORDS</span></div><div class="course-body"><div class="course-meta"><span>الإبداع</span><span>◷ 15 دقيقة / يوم</span></div><h3>الكتابة الإبداعية</h3><p>عبّر عن أفكارك بطريقة واضحة وممتعة ومؤثرة.</p><div class="course-footer"><span class="level">لكل المستويات</span><button class="save-button" data-save="write">＋ أضف إلى خطتي</button></div></div></article>
+        <article class="course-card" data-category="life" data-title="التواصل الفعّال"><div class="course-visual visual-talk"><span class="talk-bubble bubble-one">…</span><span class="talk-bubble bubble-two">✓</span><span class="visual-tag">06 / CONNECT</span></div><div class="course-body"><div class="course-meta"><span>مهارات الحياة</span><span>◷ 10 دقائق / يوم</span></div><h3>التواصل الفعّال</h3><p>استمع بتركيز وعبّر عن أفكارك بثقة واحترام.</p><div class="course-footer"><span class="level">لكل المستويات</span><button class="save-button" data-save="talk">＋ أضف إلى خطتي</button></div></div></article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden>ما لقيناش نتائج. جرّب كلمة أخرى.</div>
+    </section>
+
+    <section class="planner-layout" id="planner">
+      <div class="planner-panel">
+        <div class="section-kicker">خطوتك القادمة</div><h2>خطتي الشخصية</h2><p class="panel-subtitle">المهارات التي تختارها تظهر هنا. علّم على المهمة عندما تكملها.</p>
+        <div id="planList" class="plan-list"></div>
+        <div id="planEmpty" class="plan-empty"><span>✧</span><strong>خطتك تبدأ من هنا</strong><p>أضف مهارة من المسارات أعلاه لتظهر في قائمتك.</p></div>
+      </div>
+      <aside class="focus-panel">
+        <div class="focus-orb">◷</div><span class="section-kicker">ركن التركيز</span><h2>25 دقيقة لك</h2><p>جلسة قصيرة بعيدًا عن التشتّت، لخطوة واحدة مهمّة.</p>
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="timer-controls"><button id="timerStart" class="primary-button">ابدأ التركيز</button><button id="timerReset" class="timer-reset" aria-label="إعادة ضبط المؤقت">↻</button></div>
+        <div class="timer-caption"><span class="timer-dot"></span> خذ نفسًا، وابدأ على مهل</div>
+      </aside>
+    </section>
+
+    <section class="quote-banner"><div class="quote-mark">“</div><div><p id="quoteText">لا تحتاج إلى رؤية الدرج كاملًا؛ يكفي أن تبدأ بالدرجة الأولى.</p><span>تذكير اليوم</span></div><button id="newQuote" class="quote-next" aria-label="اقتباس آخر">↻</button></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">✦</span><span>Skill<span class="brand-light">Spring</span></span></a><span>صُمّم ليجعل التعلّم عادة يومية.</span><span>© <span id="year"></span> SkillSpring</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
